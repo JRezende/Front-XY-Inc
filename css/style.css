@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Theme Name: Tema para Teste
+Description: Tema para Teste
+Author: Juliano Rezende
+Version: 1.0
+*/
+
+/*===================================
+=            Config                 =
+===================================*/
+
+.paddingNone{
+  padding: 0
+}
+.noPaddingLeft{
+  padding-left: 0;
+}
+.noPaddingRight{
+  padding-right: 0;
+}
+.clearfix{
+    clear: both;
+    display: table;
+    content: "";
+}
+.centralizar{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.centralizarHorizontal{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Verdana' !important;
+}
+
+/* Place Holder CSS */
+::-webkit-input-placeholder { color: #000; opacity: 0.5; -webkit-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+:-moz-placeholder { color: #000; opacity: 0.5; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+::-moz-placeholder { color: #000; opacity: 0.5; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+:-ms-input-placeholder { color: #000; opacity: 0.5; -ms-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+
+/* Place Holder CSS for Focus */
+:hover::-webkit-input-placeholder { opacity: 0.75; -webkit-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out;}
+:hover:-moz-placeholder { opacity: 0.75; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out;}
+:hover::-moz-placeholder { opacity: 0.75; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+:hover:-ms-input-placeholder {   opacity: 0.75; -ms-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder { opacity: 0; -webkit-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out;}
+:focus:-moz-placeholder { opacity: 0; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+:focus::-moz-placeholder { opacity: 0; -moz-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+:focus:-ms-input-placeholder { opacity: 0; -ms-transition: opacity 0.35s ease-in-out; transition: opacity 0.35s ease-in-out; }
+/* END - Place Holder CSS */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  background-color: #FFFFFF !important;
+  color: #AAA !important;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #AAA !important;
+}
+
+html,body { font-family: 'Verdana', sans-serif !important; font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0 auto;}
+
+/*.msgSucesso{
+  display: none;
+}
+*/
+
+a, a:active, a:visited, a:focus {
+    
+}
+
+a:hover{
+    
+}
+
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 38px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    background: #FFF;
+}
+
+header .menu{
+  width: 100%;
+  background: #DDD;
+}
+
+header .menu a:hover{
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.home{
+  display: table;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.home a.btn{
+    height: 200px;
+    padding: 50px 0;
+    background: #DDD;
+    font-size: 30px;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    display: block;
+    width: 100%;
+}
+
+.pagCadastro,
+.listaPoi,
+.listaPoiPesquisa{
+  color: #666;
+}
+.listaPoiProximidade{
+  margin: 10px 0 35px;
+}
+
+.titleLista {
+    font-size: 19px;
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+p{
+  font-size: 16px;
+  padding: 0 15px;
+  color: #666;
+}
+
+label{
+  display: block;
+  width: 100%;
+  clear: both;
+  color: #666;
+}
+
+button{
+  margin: 15px 0;
+  padding: 10px;
+}
+
+ul li div{
+  border: 1px solid #888;
+  display: block;
+}
+
+.mensagemSucesso{
+  display: none;
+  padding: 10px;
+  background: #23C523;
+  color: #FFF;
+  text-align: center;
+  width: 300px;
+}

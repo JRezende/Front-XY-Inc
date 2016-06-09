@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	    <title>XY Inc</title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/functions.js"></script>
+	</head>
+	<body>		
+		<section>
+			<header>
+				<nav class="menu">
+					<div class="container">				
+						<a href="javascript:home()" class="btn col-xs-12 col-sm-3 col-md-3 col-lg-3">Página Inicial</a>
+						<a href="javascript:retornarFormCadastro()" class="btn hidden-xs col-sm-3 col-md-3 col-lg-3">Cadastrar POI</a>
+						<a href="javascript:retornarLista()" class="btn hidden-xs col-sm-3 col-md-3 col-lg-3">Listar todos os POI</a>
+						<a href="javascript:retornarFormPesquisa()" class="btn hidden-xs col-sm-3 col-md-3 col-lg-3">Listar POI por proximidade</a>
+					</div>
+				</nav>
+				<div class="clearfix"></div>
+				<div>						
+					<hgroup>
+						<h1><a href="javascript:home()">XY Inc.</a></h1>
+					</hgroup>
+				</div>
+			</header>
+		</section>
+
+		<section>
+			<div class="container">								
+				<div class="home">
+					<div class="boxBtn col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="javascript:retornarFormCadastro()" class="btn">Cadastrar POI</a>
+					</div>
+					<div class="boxBtn col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="javascript:retornarLista()" class="btn col-xs-12 col-sm-4 col-md-4 col-lg-4">Listar todos os POI</a>
+					</div>
+					<div class="boxBtn col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="javascript:retornarFormPesquisa()" class="btn col-xs-12 col-sm-4 col-md-4 col-lg-4">Listar POI por proximidade</a>
+					</div>
+				</div>
+
+				<div class="pagCadastro col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="titleLista">Cadastrar Pontos de Interesse</div>
+					<form class="col-xs-12 col-sm-12 col-md-12 col-lg-12" method="post" action="" onsubmit="return adicionarPonto()">
+						<fieldset>
+							<label for="nomePoi">Nome:</label>
+							<input type="text" id="nomePoi" class="nomePoi" required></input>					
+						</fieldset>
+						<fieldset>
+							<label for="xPoi">Coordenada X:</label>
+							<input type="number" id="xPoi" class="xPoi" min="0" required></input>					
+						</fieldset>
+						<fieldset>
+							<label for="yPoi">Coordenada Y:</label>
+							<input type="number" id="yPoi" class="yPoi" min="0" required></input>					
+						</fieldset>
+						<button type="submit">Adicionar Ponto de Interesse</button>
+						<div class="mensagemSucesso">Ponto adicionado com sucesso!</div>
+					</form>
+				</div>
+
+				<div class="listaPoi class="col-xs-12 col-sm-12 col-md-12 col-lg-12"">
+					<div class="titleLista">Lista de Pontos de Interesse</div>
+					<ul></ul>
+				</div>
+
+				<div class="listaPoiPesquisa class="col-xs-12 col-sm-12 col-md-12 col-lg-12"">
+					<div class="titleLista">
+						Lista de Pontos de Interesse próximos 
+					</div>
+					<p>
+						Indique as coordenadas do ponto de referência e a distância máxima para encontrar os pontos de interesse
+					</p>
+					<form class="col-xs-12 col-sm-12 col-md-12 col-lg-12" method="post" action="" onsubmit="return procurarPontosProximos()">
+						<fieldset>
+							<label for="xPoi">Coordenada X:</label>
+							<input type="number" id="xPoiPesquisa" class="xPoi" min="0" required></input>
+						</fieldset>
+						<fieldset>
+							<label for="yPoi">Coordenada Y:</label>
+							<input type="number" id="yPoiPesquisa" class="yPoi" min="0" required></input>
+						</fieldset>
+						<fieldset>
+							<label for="distPoi">Distacia Máxima:</label>
+							<input type="number" id="distPoi" class="distPoi" required></input>
+						</fieldset>
+						<!-- <a href="javascript:procurarPontosProximos()" class="inserirPoi">Encontrar Pontos de Interesse</a> -->
+						<button type="submit" >Encontrar Pontos de Interesse</button>
+					</form>
+
+					<div class="listaPoiProximidade col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="titleLista">Lista de pontos próximos ao ponto <span></span></div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
